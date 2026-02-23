@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nicolasrp <nicolasrp@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 12:31:04 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/23 15:56:50 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/23 23:38:03 by nicolasrp        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,11 @@ void	sb(t_node **stack_b);
 void	ss(t_node **stack_a, t_node **stack_b);
 void	pa(t_node **stack_a, t_node **stack_b);
 void	pb(t_node **stack_a, t_node **stack_b);
+void	ra(t_node **stack_a);
+void	rb(t_node **stack_b);
+void	rr(t_node **stack_a, t_node **stack_b);
+void	rra(t_node **stack_a);
+void	rrb(t_node **stack_b);
+void	rrr(t_node **stack_a, t_node **stack_b);
 
 #endif
