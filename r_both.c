@@ -6,7 +6,7 @@
 /*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/24 15:13:19 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/24 15:14:52 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/24 15:36:38 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	rot_both(t_node **stack_a, t_node **stack_b, int *cost_a, int *cost_b)
 		rr(stack_a, stack_b);
 	}
 }
-
 
 /* Hace 'rrr' (rotar ambas abajo) mientras ambos costes sean negativos */
 void	rev_rot_both(t_node **stack_a, t_node **stack_b, int *cost_a,
