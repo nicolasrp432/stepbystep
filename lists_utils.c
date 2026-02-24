@@ -6,7 +6,7 @@
 /*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 14:15:16 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/23 15:39:54 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/24 13:21:40 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,20 @@ void	ft_lstadd(t_node **stack, t_node *new)
 	}
 	last = ft_lstlast(*stack);
 	last->next = new;
+}
+
+/* Cuenta cuántos nodos (números) hay en la pila */
+int	stack_size(t_node *stack)
+{
+	int	count;
+
+	count = 0;
+	while (stack)
+	{
+		count++;
+		stack = stack->next;
+	}
+	return (count);
 }
 
 /* 4. Comprueba si la pila ya está ordenada */

@@ -6,7 +6,7 @@
 /*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 15:37:54 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/23 15:43:44 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/24 14:49:11 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,3 @@ void	free_stack(t_node **stack)
 	}
 	*stack = NULL;
 }
-

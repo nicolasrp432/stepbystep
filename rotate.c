@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasrp <nicolasrp@student.42.fr>        +#+  +:+       +#+        */
+/*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 23:35:19 by nicolasrp         #+#    #+#             */
-/*   Updated: 2026/02/23 23:35:23 by nicolasrp        ###   ########.fr       */
+/*   Updated: 2026/02/24 14:52:59 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ static void	rotate(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	// Si está vacía o solo tiene 1 nodo, no hacemos nada
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	first = *stack;
-	last = ft_lstlast(*stack); // Usamos tu función de utils_list.c
-	
-	*stack = first->next;      // El segundo nodo es la nueva cabeza
-	first->next = NULL;        // El primer nodo ahora será el último
-	last->next = first;        // El antiguo último se engancha al antiguo primero
+	last = ft_lstlast(*stack);
+	*stack = first->next;
+	first->next = NULL;
+	last->next = first;
 }
 
 void	ra(t_node **stack_a)

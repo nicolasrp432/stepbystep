@@ -6,7 +6,7 @@
 /*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 15:50:35 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/23 15:52:49 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/24 14:51:03 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ static void	swap(t_node **stack)
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
-
 	first = *stack;
 	second = (*stack)->next;
-
 	first->next = second->next;
 	second->next = first;
 	*stack = second;

@@ -6,7 +6,7 @@
 /*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 13:46:55 by nicorodr          #+#    #+#             */
-/*   Updated: 2026/02/23 15:10:50 by nicorodr         ###   ########.fr       */
+/*   Updated: 2026/02/24 14:48:36 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	one_arg(t_node **stack_a, char **argv)
 
 	count = 0;
 	split = ft_split(argv[1], ' ');
-
 	while (split[count])
 		count++;
 	*stack_a = parse_args(count, split, 0);
@@ -46,7 +45,7 @@ int	main(int argc, char **argv)
 		free_stack(&stack_a);
 		return (0);
 	}
-
+	sort_stacks(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);
@@ -65,4 +64,21 @@ void	free_split(char **str)
 		i++;
 	}
 	free(str);
+}
+
+void	sort_stacks(t_node **stack_a, t_node **stack_b)
+{
+	int	size;
+
+	size = stack_size(*stack_a);
+	if (size == 2)
+		sort_two(stack_a);
+	else if (size == 3)
+		sort_three(stack_a);
+	else if (size == 4)
+		sort_four(stack_a, stack_b);
+	else if (size == 5)
+		sort_five(stack_a, stack_b);
+	else
+		sort_big(stack_a, stack_b);
 }

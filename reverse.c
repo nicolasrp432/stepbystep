@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicolasrp <nicolasrp@student.42.fr>        +#+  +:+       +#+        */
+/*   By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 23:36:31 by nicolasrp         #+#    #+#             */
-/*   Updated: 2026/02/23 23:37:20 by nicolasrp        ###   ########.fr       */
+/*   Updated: 2026/02/24 14:50:43 by nicorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,13 @@ static void	rev_rotate(t_node **stack)
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
-		
-	// Buscamos el penúltimo nodo
 	second_last = *stack;
 	while (second_last->next->next != NULL)
 		second_last = second_last->next;
-		
-	last = second_last->next; // El último nodo
-	
-	second_last->next = NULL; // El penúltimo ahora es el último
-	last->next = *stack;      // El último ahora apunta al primero
-	*stack = last;            // La pila ahora empieza por el que era el último
+	last = second_last->next;
+	second_last->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }
 
 void	rra(t_node **stack_a)

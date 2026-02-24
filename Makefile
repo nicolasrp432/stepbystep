@@ -6,7 +6,7 @@
 #    By: nicorodr <nicorodr@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/23 14:25:58 by nicorodr          #+#    #+#              #
-#    Updated: 2026/02/23 15:57:11 by nicorodr         ###   ########.fr        #
+#    Updated: 2026/02/24 15:20:55 by nicorodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,15 @@ SRC =	main.c \
 		ft_split.c \
 		operations.c \
 		swap.c \
-		push.c
+		push.c \
+		rotate.c \
+		reverse.c \
+		sort.c \
+		sort_utils.c \
+		moves.c \
+		position.c \
+		cost.c \
+		r_both.c 
 
 OBJ = $(SRC:.c=.o)
 
